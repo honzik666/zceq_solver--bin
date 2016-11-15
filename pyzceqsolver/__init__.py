@@ -1,6 +1,6 @@
 from cffi import FFI
 import os.path
-import inspect
+import pkg_resources
 
 ffi = None
 library = None
@@ -45,8 +45,9 @@ def load_library(path=None):
     ffi.cdef(library_header)
 
     if path is None:
-        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'libzceq_solver_sh.so')
-    library = ffi.dlopen(path)
+        library_pathname = pkg_resources.resource_filename(__name__, 'libzceq_solver_sh.so')
+        library = ffi.dlopen(library_pathname)
+
     assert library is not None
 
 
