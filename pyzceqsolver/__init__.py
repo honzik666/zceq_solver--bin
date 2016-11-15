@@ -88,6 +88,7 @@ class Solver:
     def validate_solution(self, block_header, solution):
         assert len(block_header) == 140
         assert len(solution) == 1344
+        self.header_.data = block_header
         self.solution_to_check_.data = solution
         return library.ValidateSolution(self.solver_, self.header_, self.solution_to_check_);
 
