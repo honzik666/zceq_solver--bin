@@ -1,4 +1,4 @@
-from pyzceqsolver import Solver
+from pyzceqsolver.solver import Solver
 import string
 
 s = Solver()
