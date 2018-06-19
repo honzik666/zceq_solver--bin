@@ -17,5 +17,9 @@ python3.7 -m venv venv/py3.7 && \
 venv/py3.7/bin/pip install -e . && \
 venv/py3.7/bin/pip install wheel && \
 venv/py3.7/bin/python ./setup.py bdist_wheel
+virtualenv venv/pypy -p \`which pypy\` && \
+venv/pypy/bin/pip install -e . && \
+venv/pypy/bin/pip install wheel && \
+venv/pypy/bin/python ./setup.py bdist_wheel
 
 "
