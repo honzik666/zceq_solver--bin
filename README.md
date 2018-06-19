@@ -6,9 +6,18 @@ version of the library. Change the symlink inside if you can use
 "avx2" version.
 
 
+# Building all wheels in Docker
+
+Run script `docker-build.sh` which builds wheels to directory `dist/` for every Python in `base-env` Docker image.
+
+```
+./docker-build.sh
+```
+
 # Building Python package/Development mode
 
 ## Prerequisites
+
 - clone the repository
 
 - create python virtualenv:
